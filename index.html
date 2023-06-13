@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-		<script src="Headbutt%20Grid_files/jquery.js"></script>
-		<link rel="stylesheet" href="Headbutt%20Grid_files/font-awesome.css">
+		<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<style>
 			.block {
 				margin-right: -2px; 
@@ -151,7 +151,7 @@
 		<div class="optionLbl">Trainer ID:</div><input id="trainer_id">
 	</div>
 	<div style="margin: 2px;">
-		<div class="optionLbl">Map:</div><select id="img_url"><option selected="selected"></option><option value="headbuttgrid/img/maps/Azalea_Town_GSC.png">Azalea Town</option><option value="headbuttgrid/img/maps/Ilex_Forest_GSC.png">Ilex Forest</option><option value="headbuttgrid/img/maps/Lake_of_Rage_GSC.png">Lake of Rage</option><option value="headbuttgrid/img/maps/Kanto_Route_26_GSC.png">Route 26</option><option value="headbuttgrid/img/maps/Kanto_Route_27_GSC.png">Route 27</option><option value="headbuttgrid/img/maps/Johto_Route_29_GSC.png">Route 29</option><option value="headbuttgrid/img/maps/Johto_Route_30_GSC.png">Route 30</option><option value="headbuttgrid/img/maps/Johto_Route_31_GSC.png">Route 31</option><option value="headbuttgrid/img/maps/Johto_Route_32_GSC.png">Route 32</option><option value="headbuttgrid/img/maps/Johto_Route_33_GSC.png">Route 33</option><option value="headbuttgrid/img/maps/Johto_Route_34_GSC.png">Route 34</option><option value="headbuttgrid/img/maps/Johto_Route_35_GSC.png">Route 35</option><option value="headbuttgrid/img/maps/Johto_Route_36_C.png">Route 36</option><option value="headbuttgrid/img/maps/Johto_Route_37_GSC.png">Route 37</option><option value="headbuttgrid/img/maps/Johto_Route_38_GSC.png">Route 38</option><option value="headbuttgrid/img/maps/Johto_Route_39_GSC.png">Route 39</option><option value="headbuttgrid/img/maps/Johto_Route_42_GSC.png">Route 42</option><option value="headbuttgrid/img/maps/Johto_Route_43_GS.png">Route 43</option><option value="headbuttgrid/img/maps/Johto_Route_44_GSC.png">Route 44</option></select>
+		<div class="optionLbl">Map:</div><select id="img_url"><option selected="selected"></option><option value="maps/azaleatown.png">Azalea Town</option><option value="maps/ilexforest.png">Ilex Forest</option><option value="maps/lakeofrage.png">Lake of Rage</option><option value="maps/route26.png">Route 26</option><option value="maps/route27.png">Route 27</option><option value="maps/route29.png">Route 29</option><option value="maps/route30.png">Route 30</option><option value="maps/route31.png">Route 31</option><option value="maps/route32.png">Route 32</option><option value="maps/route33.png">Route 33</option><option value="maps/route34.png">Route 34</option><option value="maps/route35.png">Route 35</option><option value="maps/route36.png">Route 36</option><option value="maps/route37.png">Route 37</option><option value="maps/route38.png">Route 38</option><option value="maps/route39.png">Route 39</option><option value="maps/route42.png">Route 42</option><option value="maps/route43.png">Route 43</option><option value="maps/route44.png">Route 44</option></select>
 	</div>
 	</div>
 	<div class="bordered">
@@ -346,46 +346,58 @@
 		};
 		
 		var imageUrls = {
-			"Azalea Town": "headbuttgrid/img/maps/Azalea_Town.png",
-			"Route 33": "headbuttgrid/img/maps/Johto_Route_33.png",
-			"Route 42": "headbuttgrid/img/maps/Johto_Route_42.png",
-			"Ilex Forest": "headbuttgrid/img/maps/Ilex_Forest.png",
-			"Lake of Rage": "headbuttgrid/img/maps/Lake_of_Rage.png",
-			"Route 43": "headbuttgrid/img/maps/Johto_Route_43.png",
+			"Azalea Town": "maps/azaleatown.png",
+			"Route 33": "maps/ilexforest.png",
+			"Route 42": "maps/route42.png",
+			"Ilex Forest": "maps/ilexforest.png",
+			"Lake of Rage": "maps/lakeofrage.png",
+			"Route 43": "maps/route43.png",
 			"Route 26": "maps/route26.png",
-			"Route 27": "headbuttgrid/img/maps/Kanto_Route_27.png",
-			"Route 32": "headbuttgrid/img/maps/Johto_Route_32.png",
-			"Route 29": "headbuttgrid/img/maps/Johto_Route_29.png",
-			"Route 30": "headbuttgrid/img/maps/Johto_Route_30.png",
-			"Route 31": "headbuttgrid/img/maps/Johto_Route_31.png",
-			"Route 34": "headbuttgrid/img/maps/Johto_Route_34.png",
-			"Route 35": "headbuttgrid/img/maps/Johto_Route_35.png",
-			"Route 36": "headbuttgrid/img/maps/Johto_Route_36.png",
-			"Route 37": "headbuttgrid/img/maps/Johto_Route_37.png",
-			"Route 38": "headbuttgrid/img/maps/Johto_Route_38.png",
-			"Route 39": "headbuttgrid/img/maps/Johto_Route_39.png",
-			"Route 44": "headbuttgrid/img/maps/Johto_Route_44.png"
+			"Route 27": "maps/route27.png",
+			"Route 32": "maps/route32.png",
+			"Route 29": "maps/route29.png",
+			"Route 30": "maps/route30.png",
+			"Route 31": "maps/route31.png",
+			"Route 34": "maps/route34.png",
+			"Route 35": "maps/route35.png",
+			"Route 36": "maps/route36.png",
+			"Route 37": "maps/route37.png",
+			"Route 38": "maps/route38.png",
+			"Route 39": "maps/route39.png",
+			"Route 44": "maps/route44.png"
 		};
 		
 		var pokeImageUrls = {
-			"Caterpie": "headbuttgrid/img/caterpie.png",
-			"Metapod": "headbuttgrid/img/metapod.png",
-			"Butterfree": "headbuttgrid/img/butterfree.png",
-			"Weedle": "headbuttgrid/img/weedle.png",
-			"Kakuna": "headbuttgrid/img/kakuna.png",
-			"Beedrill": "headbuttgrid/img/beedrill.png",
-			"Exeggcute": "headbuttgrid/img/exeggcute.png",
-			"Ekans": "headbuttgrid/img/ekans.png",
-			"Venonat": "headbuttgrid/img/venonat.png",
-			"Spearow": "headbuttgrid/img/spearow.png",
-			"Aipom": "headbuttgrid/img/aipom.png",
-			"Heracross": "headbuttgrid/img/heracross.png",
-			"Ledyba": "headbuttgrid/img/ledyba.png",
-			"Spinarak": "headbuttgrid/img/spinarak.png",
-			"Hoothoot": "headbuttgrid/img/hoothoot.png",
-			"Noctowl": "headbuttgrid/img/noctowl.png",
-			"Pineco": "headbuttgrid/img/pineco.png",
+			"Caterpie": "sprites/caterpie.png",
+			"Metapod": "sprites/metapod.png",
+			"Butterfree": "sprites/butterfree.png",
+			"Weedle": "sprites/weedle.png",
+			"Kakuna": "sprites/kakuna.png",
+			"Beedrill": "sprites/beedrill.png",
+			"Exeggcute": "sprites/exeggcute.png",
+			"Ekans": "sprites/ekans.png",
+			"Venonat": "sprites/venonat.png",
+			"Spearow": "sprites/spearow.png",
+			"Aipom": "sprites/aipom.png",
+			"Heracross": "sprites/heracross.png",
+			"Ledyba": "sprites/ledyba.png",
+			"Spinarak": "sprites/spinarak.png",
+			"Hoothoot": "sprites/hoothoot.png",
+			"Noctowl": "sprites/noctowl.png",
+			"Pineco": "sprites/pineco.png",
 		};
+
+		const badMaps = [
+		  "maps/azaleatown.png",
+		  "maps/route26.png",
+		  "maps/route30.png",
+		  "maps/route32.png",
+		  "maps/route33.png",
+		  "maps/route34.png",
+		  "maps/route35.png",
+		  "maps/route38.png"
+		];
+
 		var currentMap = "";
 		var currentImg;
 		var currentScale = 1;
@@ -412,7 +424,7 @@
 			}); 			
 		});
 		function updateGrid(){
-			
+			console.log($(currentImg).attr('src'));
 			var pivot = -1;
 			var moderateIdxs = [];
 			var lowIdxs = [];
@@ -511,7 +523,13 @@
 			gridBlockWidth = defaultBlockSize * scale;
 			gridBlockHeight = defaultBlockSize * scale;
 			gridHeight = $(currentImg)[0].clientHeight/gridBlockHeight;
-			gridWidth = $(currentImg)[0].clientWidth/gridBlockWidth;		
+			gridWidth = $(currentImg)[0].clientWidth/gridBlockWidth;	
+			if ($(currentImg).attr('src') != "maps/ilexforest.png") {
+				gridWidth--;
+			}
+			if (!badMaps.includes($(currentImg).attr('src'))) {
+				gridHeight--;
+			}
 			currentFontSize = scaleFontsizes[scale-1];		
 			updateGrid();
 		}
