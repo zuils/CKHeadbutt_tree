@@ -87,14 +87,6 @@
 				padding: 0px;
 				margin-bottom: 2px;
 			}
-			#gold_enc {
-				background-color: #daa520;
-				border: 2px solid #b3871a;
-			}
-			#silv_enc {
-				background-color: #c0c0c0;
-				border: 2px solid #808080;
-			}
 			#crys_enc {
 				background-color: #4fd9ff;
 				border: 2px solid #3eabc9;
@@ -168,8 +160,6 @@
 	</div>
 	
 	<div class="bordered">
-		<div class="enc_div" id="gold_enc"></div>
-		<div class="enc_div" id="silv_enc"></div>
 		<div class="enc_div" id="crys_enc"></div>
 	</div>
 	<div class="bordered description">
@@ -190,60 +180,6 @@
 	</div>
 	<script>	
 		var encounterGroups = {
-			"Gold": [
-				{
-					"normal": [
-						{poke: "Caterpie", rate: 65},
-						{poke: "Metapod", rate: 15},
-						{poke: "Butterfree", rate: 5},
-						{poke: "Exeggcute", rate: 15}
-					],
-					"rare": [
-						{poke: "Caterpie", rate: 50},						
-						{poke: "Butterfree", rate: 5},
-						{poke: "Exeggcute", rate: 15},
-						{poke: "Pineco", rate: 30}
-					]
-				},
-				{
-					"normal": [
-						{poke: "Spearow", rate: 80},
-						{poke: "Aipom", rate: 20}
-					],
-					"rare": [
-						{poke: "Spearow", rate: 50},
-						{poke: "Aipom", rate: 20},
-						{poke: "Heracross", rate: 30}
-					]
-				}
-			],
-			"Silver": [
-				{
-					"normal": [
-						{poke: "Weedle", rate: 65},
-						{poke: "Kakuna", rate: 15},
-						{poke: "Beedrill", rate: 5},
-						{poke: "Exeggcute", rate: 15}
-					],
-					"rare": [
-						{poke: "Weedle", rate: 50},						
-						{poke: "Beedrill", rate: 5},
-						{poke: "Exeggcute", rate: 15},
-						{poke: "Pineco", rate: 30}
-					]
-				},
-				{
-					"normal": [
-						{poke: "Spearow", rate: 80},
-						{poke: "Aipom", rate: 20}
-					],
-					"rare": [
-						{poke: "Spearow", rate: 50},
-						{poke: "Aipom", rate: 20},
-						{poke: "Heracross", rate: 30}
-					]
-				}
-			],
 			"Crystal": [
 				{
 					"normal": [
@@ -324,25 +260,25 @@
 			]
 		};
 		var mapEncounterGroups = {
-			"Azalea Town": {"Gold": 0, "Silver": 0, "Crystal":0},
-			"Route 33": {"Gold": 1, "Silver": 1, "Crystal":0},
-			"Route 42": {"Gold": 1, "Silver":1 , "Crystal":0},
-			"Ilex Forest": {"Gold": 0, "Silver": 0, "Crystal":1},
-			"Lake of Rage": {"Gold": 0, "Silver": 0, "Crystal":2},
-			"Route 43": {"Gold": 1, "Silver": 1, "Crystal":2},
-			"Route 26": {"Gold": 0, "Silver": 0, "Crystal":3},
-			"Route 27": {"Gold": 0, "Silver": 0, "Crystal":3},
-			"Route 32": {"Gold": 1, "Silver": 1, "Crystal":3},
-			"Route 29": {"Gold": 1, "Silver": 1, "Crystal":4},
-			"Route 30": {"Gold": 1, "Silver": 1, "Crystal":4},
-			"Route 31": {"Gold":1 , "Silver": 1, "Crystal":4},
-			"Route 34": {"Gold": 0, "Silver": 0, "Crystal":4},
-			"Route 35": {"Gold": 0, "Silver": 0, "Crystal":4},
-			"Route 36": {"Gold": 0, "Silver": 0, "Crystal":4},
-			"Route 37": {"Gold": 0, "Silver": 0, "Crystal":4},
-			"Route 38": {"Gold": 0, "Silver": 0, "Crystal":4},
-			"Route 39": {"Gold": 0, "Silver": 0, "Crystal":4},
-			"Route 44": {"Gold": 1, "Silver": 1, "Crystal":5}
+			"Azalea Town": {"Crystal":0},
+			"Route 33": {"Crystal":0},
+			"Route 42": {"Crystal":0},
+			"Ilex Forest": {"Crystal":1},
+			"Lake of Rage": {"Crystal":2},
+			"Route 43": {"Crystal":2},
+			"Route 26": {"Crystal":3},
+			"Route 27": {"Crystal":3},
+			"Route 32": {"Crystal":3},
+			"Route 29": {"Crystal":4},
+			"Route 30": {"Crystal":4},
+			"Route 31": {"Crystal":4},
+			"Route 34": {"Crystal":4},
+			"Route 35": {"Crystal":4},
+			"Route 36": {"Crystal":4},
+			"Route 37": {"Crystal":4},
+			"Route 38": {"Crystal":4},
+			"Route 39": {"Crystal":4},
+			"Route 44": {"Crystal":5}
 		};
 		
 		var imageUrls = {
@@ -486,8 +422,6 @@
 				$("#zoom_slider").removeAttr("disabled");
 				rescaleImage(currentScale);
 				var currentEncounterGroups = mapEncounterGroups[currentMap];
-				$("#gold_enc").html(createEncounterDisplay(currentEncounterGroups, "Gold"));
-				$("#silv_enc").html(createEncounterDisplay(currentEncounterGroups, "Silver"));
 				$("#crys_enc").html(createEncounterDisplay(currentEncounterGroups, "Crystal"));
 			}).attr('src', url);
 		});
